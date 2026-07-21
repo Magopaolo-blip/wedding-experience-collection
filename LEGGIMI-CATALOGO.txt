@@ -1,0 +1,24 @@
+WEDDING EXPERIENCE COLLECTION V4 - CATALOGO SFOGLIABILE
+
+RISULTATO
+- Nuova sezione "Il catalogo completo" nella landing.
+- Catalogo di 13 pagine sfogliabile a schermo intero.
+- Frecce, tastiera e swipe da smartphone.
+- I link "Guarda il video" presenti nel catalogo restano cliccabili.
+- Pulsanti per aprire o scaricare il PDF.
+- Nessuna cartella da creare su GitHub.
+- Nel PDF destinato al sito il prefisso telefonico è stato corretto da +32 a +39.
+
+AGGIORNAMENTO RAPIDO DEL SITO GIA' PUBBLICATO
+Carica nella root del repository:
+- index.html
+- catalogo-musetti.pdf
+- catalogo-01.jpg fino a catalogo-13.jpg
+
+GitHub:
+Code > Add file > Upload files
+Trascina tutti i file insieme.
+Conferma la sostituzione di index.html.
+Commit changes.
+
+Per una nuova installazione usa invece lo ZIP COMPLETO.
