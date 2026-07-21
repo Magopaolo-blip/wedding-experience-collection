@@ -1,0 +1,24 @@
+WEDDING EXPERIENCE COLLECTION — MASTER WIREFRAME V3
+
+Questa versione usa solo file nella cartella principale: nessuna sottocartella.
+
+ANTEPRIMA
+Apri index.html con Chrome o Edge.
+
+SU GITHUB
+Carica tutti i file nella root del repository.
+Quando GitHub chiede se sostituire index.html, conferma il nuovo caricamento/commit.
+
+FILE PRINCIPALI
+- index.html
+- wedding-showreel.mp4
+- bubble-bar.mp4
+- bubble-show-stage.jpg
+- wedding-tv-cover.jpg
+- bubble-bar-poster.jpg
+- bubble-bar-detail.jpg
+- bubble-bar-menu.jpg
+- parole-liquide-cover.svg
+
+NOTA PAROLE LIQUIDE
+La copertina è editoriale e provvisoria. Verrà sostituita da una fotografia reale quando il sito paroleliquide.it sarà raggiungibile o quando verrà caricata una foto definitiva.
