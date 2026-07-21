@@ -1,0 +1,16 @@
+AGGIORNAMENTO V5 — CORREZIONI LAYOUT
+
+Modifiche:
+1. La sezione “La promessa” è stata ridotta a tre frasi brevi.
+2. Eliminato il secondo video ripetuto: le apparizioni TV sono ora una fascia compatta.
+3. La prova sotto Bubble Experience ora parla di durata, finale fotografico e disponibilità.
+4. Sostituita la fotografia cerchiata nella sezione Bubble Bar.
+
+SU GITHUB CARICA SOLO:
+- index.html
+- bubble-bar-detail.jpg
+
+Percorso:
+Code > Add file > Upload files
+Trascina i due file nella root del repository.
+Conferma la sostituzione e fai Commit changes.

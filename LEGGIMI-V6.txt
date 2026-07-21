@@ -1,0 +1,12 @@
+AGGIORNAMENTO V6 — FOTO BUBBLE BAR
+
+Modifica:
+- sostituita la fotografia del Menu Bubble Bar con la nuova immagine delle due bolle luminose.
+
+SU GITHUB CARICA SOLO:
+- bubble-bar-menu.jpg
+
+Percorso:
+Code > Add file > Upload files
+Trascina il file nella root del repository.
+Conferma la sostituzione e fai Commit changes.
