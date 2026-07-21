@@ -1,0 +1,16 @@
+AGGIORNAMENTO V9 — CTA FINALE SEMPLIFICATA
+
+Modifica:
+- eliminati occhiello e testo esplicativo;
+- nuova CTA essenziale:
+  “Parliamo del prossimo matrimonio.”
+- mantenuto il pulsante WhatsApp;
+- ridotta l'altezza della sezione finale.
+
+SU GITHUB CARICA SOLO:
+- index.html
+
+Percorso:
+Code > Add file > Upload files
+Trascina index.html nella root del repository.
+Conferma la sostituzione e fai Commit changes.

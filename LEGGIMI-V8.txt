@@ -1,0 +1,17 @@
+AGGIORNAMENTO V8 — CATALOGO IN UNA NUOVA SCHEDA
+
+Decisione UX:
+- “Sfoglia il catalogo” apre catalogo.html in una nuova scheda.
+- La landing resta aperta nella scheda originale.
+- La pagina catalogo contiene anche “Torna alla Collection”.
+- Il secondo comando è stato mantenuto con una funzione diversa:
+  “Scarica il PDF”, invece di “Apri il PDF”.
+
+SU GITHUB CARICA SOLO:
+- index.html
+- catalogo.html
+
+Percorso:
+Code > Add file > Upload files
+Trascina i due file nella root del repository.
+Conferma la sostituzione di index.html e fai Commit changes.

@@ -1,0 +1,15 @@
+AGGIORNAMENTO V7 — FOTO PAROLE LIQUIDE
+
+Modifica:
+- sostituita l'illustrazione della sezione Parole Liquide con la fotografia reale del sito;
+- migliorata leggermente luminosità e contrasto per la sezione scura;
+- mantenuta la composizione completa con tablet, parole, boccette e stampa della Traccia.
+
+SU GITHUB CARICA SOLO:
+- index.html
+- parole-liquide-cover.jpg
+
+Percorso:
+Code > Add file > Upload files
+Trascina i due file nella root del repository.
+Conferma la sostituzione di index.html e fai Commit changes.
