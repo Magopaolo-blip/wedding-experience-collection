@@ -2,7 +2,10 @@
 <html lang="it">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
 <meta name="theme-color" content="#14110f">
 <meta name="description" content="Catalogo completo Musetti Show: tutti gli intrattenimenti di Paolo Musetti.">
 <title>Catalogo completo — Musetti Show</title>
@@ -10,49 +13,46 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
-:root{--paper:#fbf8f2;--ink:#171513;--gold:#b18b52;--dark:#14110f;--line:rgba(255,255,255,.16)}
+:root{--ink:#171513;--dark:#14110f;--panel:#171310;--line:rgba(255,255,255,.16)}
 *{box-sizing:border-box}
 html,body{margin:0;min-height:100%;background:var(--dark);color:#fff;font-family:Inter,Arial,sans-serif}
 body{min-height:100vh;display:grid;grid-template-rows:auto minmax(0,1fr) auto;overflow:hidden}
-.topbar{display:flex;align-items:center;justify-content:space-between;gap:18px;padding:12px clamp(14px,3vw,34px);border-bottom:1px solid var(--line);background:#171310}
-.brand{min-width:0}
+.topbar{display:flex;align-items:center;justify-content:space-between;gap:18px;padding:12px clamp(14px,3vw,34px);border-bottom:1px solid var(--line);background:var(--panel);z-index:20}
 .brand strong{display:block;font-family:"Cormorant Garamond",serif;font-size:clamp(22px,3vw,34px);font-weight:500;line-height:1}
 .brand span{display:block;margin-top:4px;font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:#bdb3a7}
-.actions{display:flex;align-items:center;gap:8px;flex-wrap:wrap;justify-content:flex-end}
-.action{display:inline-flex;align-items:center;justify-content:center;min-height:38px;padding:0 13px;border:1px solid rgba(255,255,255,.27);color:#fff;text-decoration:none;background:transparent;font:inherit;font-size:9px;letter-spacing:.12em;text-transform:uppercase;cursor:pointer}
-.action:hover,.action:focus{background:#fff;color:#171513;outline:none}
-.action.primary{background:#fff;color:#171513}
-.action.primary:hover{background:#e7ded2}
-.viewer{min-height:0;display:grid;place-items:center;padding:12px;background:#0d0b0a;overflow:hidden}
+.action{display:inline-flex;align-items:center;justify-content:center;min-height:38px;padding:0 13px;border:1px solid rgba(255,255,255,.27);color:#171513;text-decoration:none;background:#fff;font-size:9px;letter-spacing:.12em;text-transform:uppercase}
+.action:hover,.action:focus{background:#e7ded2;outline:none}
+.desktop-viewer{min-height:0;display:grid;place-items:center;padding:12px;background:#0d0b0a;overflow:hidden}
 .page-wrap{position:relative;display:inline-block;line-height:0;max-width:100%;max-height:100%}
 .page{display:block;width:auto;height:auto;max-width:100%;max-height:calc(100vh - 145px);object-fit:contain;box-shadow:0 14px 46px rgba(0,0,0,.48);user-select:none;-webkit-user-drag:none}
 .link-layer{position:absolute;inset:0;pointer-events:none}
 .hotspot{position:absolute;display:block;pointer-events:auto;border:1px solid transparent;background:rgba(255,255,255,0)}
 .hotspot:hover,.hotspot:focus{border-color:rgba(255,255,255,.9);background:rgba(255,255,255,.13);outline:none}
-.bottom{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:14px;padding:10px clamp(14px,3vw,34px);border-top:1px solid var(--line);background:#171310}
-.nav{display:flex;gap:8px}
-.nav.right{justify-content:flex-end}
-.nav button{width:44px;height:38px;border:1px solid rgba(255,255,255,.27);background:transparent;color:#fff;font:inherit;font-size:17px;cursor:pointer}
+.bottom{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:14px;padding:10px clamp(14px,3vw,34px);border-top:1px solid var(--line);background:var(--panel)}
+.nav{display:flex;gap:8px} .nav.right{justify-content:flex-end}
+.nav button{min-width:112px;height:40px;padding:0 14px;border:1px solid rgba(255,255,255,.27);background:transparent;color:#fff;font:inherit;font-size:10px;letter-spacing:.08em;text-transform:uppercase;cursor:pointer}
 .nav button:hover:not(:disabled){background:#fff;color:#171513}
 .nav button:disabled{opacity:.25;cursor:default}
 .meta{text-align:center;min-width:170px}
 .meta strong{display:block;font-family:"Cormorant Garamond",serif;font-size:21px;font-weight:500;line-height:1}
 .meta span{display:block;margin-top:4px;font-size:9px;letter-spacing:.12em;text-transform:uppercase;color:#aaa095}
-.mobile-hint{display:none}
-@media(max-width:680px){
-  body{grid-template-rows:auto minmax(0,1fr) auto}
-  .topbar{align-items:flex-start;gap:10px;padding:10px 12px}
+.mobile-catalog{display:none}
+@media(max-width:820px){
+  html{scroll-behavior:smooth}
+  body{display:block;min-height:100%;overflow:auto;background:#0d0b0a}
+  .topbar{position:sticky;top:0;align-items:center;padding:10px 12px;box-shadow:0 8px 24px rgba(0,0,0,.28)}
+  .brand strong{font-size:25px}
   .brand span{display:none}
-  .actions .download-label{display:none}
-  .actions .pdf-download{display:none}
-  .action{padding:0 10px;min-height:36px}
-  .viewer{padding:8px;touch-action:pan-y}
-  .page{max-height:calc(100dvh - 150px);max-width:100%;touch-action:none}
-  .mobile-hint{display:block;position:absolute;left:50%;bottom:8px;transform:translateX(-50%);z-index:4;background:rgba(20,17,15,.84);padding:7px 10px;color:#fff;font-size:9px;letter-spacing:.08em;text-transform:uppercase;white-space:nowrap;pointer-events:none}
-  .bottom{padding:8px 12px;grid-template-columns:56px 1fr 56px}
-  .nav button{width:52px;height:42px;font-size:21px}
-  .meta{min-width:0}
-  .meta strong{font-size:17px}
+  .action{min-height:38px;padding:0 11px;font-size:8px;white-space:nowrap}
+  .desktop-viewer,.bottom{display:none!important}
+  .mobile-catalog{display:block;padding:12px 10px 28px}
+  .mobile-intro{margin:0 0 12px;padding:11px 12px;border:1px solid rgba(255,255,255,.16);font-size:10px;line-height:1.5;letter-spacing:.09em;text-transform:uppercase;color:#d9d0c6;text-align:center}
+  .mobile-page{position:relative;margin:0 0 16px;background:#111;box-shadow:0 12px 30px rgba(0,0,0,.38);line-height:0}
+  .mobile-page img{display:block;width:100%;height:auto}
+  .mobile-page .link-layer{position:absolute;inset:0}
+  .mobile-page-label{display:block;padding:8px 10px 9px;background:#171310;border-top:1px solid rgba(255,255,255,.12);font-size:9px;line-height:1.2;letter-spacing:.1em;text-transform:uppercase;color:#bfb4a8}
+  .mobile-end{padding:16px 10px 8px;text-align:center}
+  .mobile-end a{display:inline-flex;min-height:44px;align-items:center;justify-content:center;padding:0 18px;background:#fff;color:#171513;text-decoration:none;font-size:9px;letter-spacing:.12em;text-transform:uppercase}
 }
 </style>
 </head>
@@ -62,27 +62,27 @@ body{min-height:100vh;display:grid;grid-template-rows:auto minmax(0,1fr) auto;ov
     <strong>Catalogo completo</strong>
     <span>Musetti Show · tutti gli intrattenimenti</span>
   </div>
-  <nav class="actions" aria-label="Azioni catalogo">
-    <a class="action primary" href="index.html">← Torna alla Collection</a>
-    <a class="action pdf-download" href="catalogo-musetti.pdf" download><span class="download-label">Scarica PDF&nbsp;</span>↓</a>
-  </nav>
+  <a class="action" href="index.html?v=12">← Torna alla Collection</a>
 </header>
 
-<main class="viewer" id="viewer">
+<main class="desktop-viewer" id="viewer">
   <div class="page-wrap">
     <img class="page" id="page" src="catalogo-01.jpg" alt="Pagina 1 del catalogo: Copertina">
     <div class="link-layer" id="linkLayer"></div>
-    <div class="mobile-hint">Scorri con le frecce o trascina</div>
   </div>
 </main>
 
+<section class="mobile-catalog" id="mobileCatalog" aria-label="Catalogo completo da scorrere">
+  <p class="mobile-intro">Scorri verso il basso per sfogliare tutte le 13 pagine.</p>
+</section>
+
 <footer class="bottom">
-  <div class="nav"><button id="prev" type="button" aria-label="Pagina precedente">←</button></div>
+  <div class="nav"><button id="prev" type="button" aria-label="Pagina precedente">← Precedente</button></div>
   <div class="meta">
     <strong id="pageName">Copertina</strong>
     <span id="counter">Pagina 1 di 13</span>
   </div>
-  <div class="nav right"><button id="next" type="button" aria-label="Pagina successiva">→</button></div>
+  <div class="nav right"><button id="next" type="button" aria-label="Pagina successiva">Successiva →</button></div>
 </footer>
 
 <script>
@@ -91,24 +91,7 @@ const titles = ["Copertina", "Magic Umbrellas", "Magic Cabaret", "Bubble Show", 
 const links = {"2": [{"href": "https://drive.google.com/file/d/1MOcPARYmxQYIaZp3MfnORh7obMOrWhmG/view?usp=sharing", "left": 62.6659, "top": 73.3478, "width": 10.1552, "height": 2.7718}], "3": [{"href": "https://drive.google.com/file/d/1FgH2v9AbpO5wbFTe5sXxyKm2oSCL4Gg4/view?usp=sharing", "left": 6.3081, "top": 73.752, "width": 10.1552, "height": 2.7718}], "4": [{"href": "https://drive.google.com/file/d/1RihL7s6Jt4Jf6_ymqgrqBm5y53btkLgF/view?usp=sharing", "left": 62.4844, "top": 81.5766, "width": 10.1552, "height": 2.7718}], "5": [{"href": "https://drive.google.com/file/d/1kToLoyj857L31rC11zOBRrIBOcyCRk6Y/view?usp=sharing", "left": 63.7377, "top": 74.3157, "width": 10.1552, "height": 2.7718}], "6": [{"href": "https://drive.google.com/file/d/1c02ClIu7dnx792oyDcMI-OG1jXLXnuyz/view?usp=sharing", "left": 7.0703, "top": 71.0595, "width": 10.1552, "height": 2.7718}], "7": [{"href": "https://drive.google.com/file/d/1EQwlMsggwBlGgInosMoeniCQXhCPwUDH/view?usp=sharing", "left": 7.0703, "top": 72.3662, "width": 10.1552, "height": 2.7718}, {"href": "https://www.instagram.com/reel/DLmGccmyeDp/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==", "left": 7.0703, "top": 75.516, "width": 5.1667, "height": 2.7718}], "8": [{"href": "https://drive.google.com/file/d/1XHORVC3PAyxxtZnFb9vpwBR8CwitTbhr/view?usp=sharing", "left": 63.7377, "top": 83.7054, "width": 10.1552, "height": 2.7718}], "9": [{"href": "https://drive.google.com/file/d/1YSpNzdgmI4O1N9kdtbPL-nRYAR427O3f/view?usp=sharing", "left": 7.0703, "top": 74.8337, "width": 10.1552, "height": 2.7718}], "10": [{"href": "https://drive.google.com/file/d/1YSpNzdgmI4O1N9kdtbPL-nRYAR427O3f/view?usp=sharing", "left": 7.0703, "top": 73.3342, "width": 10.1552, "height": 2.7718}, {"href": "https://drive.google.com/file/d/13290i22vLjvXExlEpHbLciubMnm2eQ1j/view?usp=sharing", "left": 7.0703, "top": 76.484, "width": 16.7472, "height": 2.7718}], "11": [{"href": "https://drive.google.com/file/d/1TCLYp6oVrn9DKOkS0bGkDYibrXzf1nna/view?usp=sharing", "left": 7.0703, "top": 77.729, "width": 10.1552, "height": 2.7718}]};
 let index = 0;
 
-const page = document.getElementById("page");
-const pageName = document.getElementById("pageName");
-const counter = document.getElementById("counter");
-const prev = document.getElementById("prev");
-const next = document.getElementById("next");
-const linkLayer = document.getElementById("linkLayer");
-
-function render() {
-  const number = index + 1;
-  const title = titles[index];
-  page.src = pages[index];
-  page.alt = `Pagina ${number} del catalogo: ${title}`;
-  pageName.textContent = title;
-  counter.textContent = `Pagina ${number} di ${pages.length}`;
-  prev.disabled = index === 0;
-  next.disabled = index === pages.length - 1;
-
-  linkLayer.innerHTML = "";
+function addHotspots(layer, number) {
   (links[String(number)] || []).forEach(item => {
     const a = document.createElement("a");
     a.className = "hotspot";
@@ -121,63 +104,62 @@ function render() {
     a.style.top = item.top + "%";
     a.style.width = item.width + "%";
     a.style.height = item.height + "%";
-    linkLayer.appendChild(a);
-  });
-
-  [index - 1, index + 1].forEach(i => {
-    if (i >= 0 && i < pages.length) {
-      const preload = new Image();
-      preload.src = pages[i];
-    }
+    layer.appendChild(a);
   });
 }
 
+const page = document.getElementById("page");
+const pageName = document.getElementById("pageName");
+const counter = document.getElementById("counter");
+const prev = document.getElementById("prev");
+const next = document.getElementById("next");
+const linkLayer = document.getElementById("linkLayer");
+
+function renderDesktop() {
+  const number = index + 1;
+  page.src = pages[index];
+  page.alt = `Pagina ${number} del catalogo: ${titles[index]}`;
+  pageName.textContent = titles[index];
+  counter.textContent = `Pagina ${number} di ${pages.length}`;
+  prev.disabled = index === 0;
+  next.disabled = index === pages.length - 1;
+  linkLayer.innerHTML = "";
+  addHotspots(linkLayer, number);
+}
 function move(delta) {
   const target = index + delta;
-  if (target >= 0 && target < pages.length) {
-    index = target;
-    render();
-  }
+  if (target >= 0 && target < pages.length) { index = target; renderDesktop(); }
 }
-
 prev.addEventListener("click", () => move(-1));
 next.addEventListener("click", () => move(1));
-
 document.addEventListener("keydown", event => {
   if (event.key === "ArrowLeft") move(-1);
   if (event.key === "ArrowRight") move(1);
-  if (event.key === "Home") { index = 0; render(); }
-  if (event.key === "End") { index = pages.length - 1; render(); }
 });
 
-let startX = null;
-const viewer = document.getElementById("viewer");
-
-function swipeStart(x) { startX = x; }
-function swipeEnd(x) {
-  if (startX === null) return;
-  const distance = x - startX;
-  if (Math.abs(distance) > 40) move(distance < 0 ? 1 : -1);
-  startX = null;
-}
-
-// Touch events improve compatibility inside mobile email and social in-app browsers.
-viewer.addEventListener("touchstart", event => {
-  if (event.touches.length === 1) swipeStart(event.touches[0].clientX);
-}, { passive: true });
-viewer.addEventListener("touchend", event => {
-  if (event.changedTouches.length === 1) swipeEnd(event.changedTouches[0].clientX);
-}, { passive: true });
-
-// Pointer fallback for desktop and compatible mobile browsers.
-viewer.addEventListener("pointerdown", event => {
-  if (event.pointerType !== "touch") swipeStart(event.clientX);
+const mobileCatalog = document.getElementById("mobileCatalog");
+pages.forEach((src, i) => {
+  const article = document.createElement("article");
+  article.className = "mobile-page";
+  const img = document.createElement("img");
+  img.src = src;
+  img.loading = i < 2 ? "eager" : "lazy";
+  img.alt = `Pagina ${i+1} del catalogo: ${titles[i]}`;
+  const layer = document.createElement("div");
+  layer.className = "link-layer";
+  addHotspots(layer, i + 1);
+  const label = document.createElement("span");
+  label.className = "mobile-page-label";
+  label.textContent = `Pagina ${i+1} di ${pages.length} · ${titles[i]}`;
+  article.append(img, layer, label);
+  mobileCatalog.appendChild(article);
 });
-viewer.addEventListener("pointerup", event => {
-  if (event.pointerType !== "touch") swipeEnd(event.clientX);
-});
+const end = document.createElement("div");
+end.className = "mobile-end";
+end.innerHTML = '<a href="index.html?v=12">← Torna alla Collection</a>';
+mobileCatalog.appendChild(end);
 
-render();
+renderDesktop();
 </script>
 </body>
 </html>
