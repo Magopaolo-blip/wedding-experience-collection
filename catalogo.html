@@ -38,16 +38,20 @@ body{min-height:100vh;display:grid;grid-template-rows:auto minmax(0,1fr) auto;ov
 .meta{text-align:center;min-width:170px}
 .meta strong{display:block;font-family:"Cormorant Garamond",serif;font-size:21px;font-weight:500;line-height:1}
 .meta span{display:block;margin-top:4px;font-size:9px;letter-spacing:.12em;text-transform:uppercase;color:#aaa095}
-.mobile-return{display:none}
+.mobile-hint{display:none}
 @media(max-width:680px){
   body{grid-template-rows:auto minmax(0,1fr) auto}
-  .topbar{align-items:flex-start}
+  .topbar{align-items:flex-start;gap:10px;padding:10px 12px}
   .brand span{display:none}
   .actions .download-label{display:none}
-  .action{padding:0 10px}
-  .page{max-height:calc(100vh - 132px)}
-  .bottom{padding:8px 12px}
-  .meta{min-width:120px}
+  .actions .pdf-download{display:none}
+  .action{padding:0 10px;min-height:36px}
+  .viewer{padding:8px;touch-action:pan-y}
+  .page{max-height:calc(100dvh - 150px);max-width:100%;touch-action:none}
+  .mobile-hint{display:block;position:absolute;left:50%;bottom:8px;transform:translateX(-50%);z-index:4;background:rgba(20,17,15,.84);padding:7px 10px;color:#fff;font-size:9px;letter-spacing:.08em;text-transform:uppercase;white-space:nowrap;pointer-events:none}
+  .bottom{padding:8px 12px;grid-template-columns:56px 1fr 56px}
+  .nav button{width:52px;height:42px;font-size:21px}
+  .meta{min-width:0}
   .meta strong{font-size:17px}
 }
 </style>
@@ -60,7 +64,7 @@ body{min-height:100vh;display:grid;grid-template-rows:auto minmax(0,1fr) auto;ov
   </div>
   <nav class="actions" aria-label="Azioni catalogo">
     <a class="action primary" href="index.html">← Torna alla Collection</a>
-    <a class="action" href="catalogo-musetti.pdf" download><span class="download-label">Scarica PDF&nbsp;</span>↓</a>
+    <a class="action pdf-download" href="catalogo-musetti.pdf" download><span class="download-label">Scarica PDF&nbsp;</span>↓</a>
   </nav>
 </header>
 
@@ -68,6 +72,7 @@ body{min-height:100vh;display:grid;grid-template-rows:auto minmax(0,1fr) auto;ov
   <div class="page-wrap">
     <img class="page" id="page" src="catalogo-01.jpg" alt="Pagina 1 del catalogo: Copertina">
     <div class="link-layer" id="linkLayer"></div>
+    <div class="mobile-hint">Scorri con le frecce o trascina</div>
   </div>
 </main>
 
@@ -147,12 +152,29 @@ document.addEventListener("keydown", event => {
 
 let startX = null;
 const viewer = document.getElementById("viewer");
-viewer.addEventListener("pointerdown", event => { startX = event.clientX; });
-viewer.addEventListener("pointerup", event => {
+
+function swipeStart(x) { startX = x; }
+function swipeEnd(x) {
   if (startX === null) return;
-  const distance = event.clientX - startX;
-  if (Math.abs(distance) > 45) move(distance < 0 ? 1 : -1);
+  const distance = x - startX;
+  if (Math.abs(distance) > 40) move(distance < 0 ? 1 : -1);
   startX = null;
+}
+
+// Touch events improve compatibility inside mobile email and social in-app browsers.
+viewer.addEventListener("touchstart", event => {
+  if (event.touches.length === 1) swipeStart(event.touches[0].clientX);
+}, { passive: true });
+viewer.addEventListener("touchend", event => {
+  if (event.changedTouches.length === 1) swipeEnd(event.changedTouches[0].clientX);
+}, { passive: true });
+
+// Pointer fallback for desktop and compatible mobile browsers.
+viewer.addEventListener("pointerdown", event => {
+  if (event.pointerType !== "touch") swipeStart(event.clientX);
+});
+viewer.addEventListener("pointerup", event => {
+  if (event.pointerType !== "touch") swipeEnd(event.clientX);
 });
 
 render();
