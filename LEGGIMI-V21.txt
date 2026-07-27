@@ -1,0 +1,32 @@
+WEDDING EXPERIENCE COLLECTION — V21 CORREZIONE PROPORZIONI FOTO
+
+PROBLEMA INDIVIDUATO
+Gli attributi HTML width e height aggiunti nella V20 impostavano un'altezza fissa
+sulle immagini. La larghezza veniva adattata dal CSS, mentre l'altezza restava
+quella originale in pixel: questo deformava soprattutto le fotografie del Bubble Bar.
+
+CORREZIONE
+- Rimossi width e height da tutte le immagini della landing italiana.
+- Rimossi width e height da tutte le immagini della landing inglese.
+- Mantenute tutte le ottimizzazioni SEO della V20.
+- Verificati desktop e mobile per entrambe le lingue.
+- Verificati hero, Bubble Experience, Bubble Bar, sezione scura, catalogo e artista.
+
+CARICAMENTO SU GITHUB
+1. Decomprimi questo ZIP.
+2. Nella pagina principale del repository scegli Add file > Upload files.
+3. Trascina tutto il contenuto, compresa la cartella en.
+4. Conferma con Commit changes.
+
+FILE DA SOSTITUIRE
+- index.html
+- catalogo.html
+- en/index.html
+- en/catalogo.html
+
+LINK DI CONTROLLO
+Italiano:
+https://magopaolo-blip.github.io/wedding-experience-collection/?v=21
+
+English:
+https://magopaolo-blip.github.io/wedding-experience-collection/en/?v=21
