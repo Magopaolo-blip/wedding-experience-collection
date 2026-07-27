@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://magopaolo-blip.github.io/wedding-experience-collection/sitemap.xml

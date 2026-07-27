@@ -1,0 +1,30 @@
+WEDDING EXPERIENCE COLLECTION — AGGIORNAMENTO V20 SEO
+
+CARICAMENTO SU GITHUB
+1. Apri la pagina principale del repository wedding-experience-collection.
+2. Clicca Add file > Upload files.
+3. Trascina TUTTO il contenuto di questa cartella, compresa la cartella en.
+4. Conferma con Commit changes.
+
+GitHub sostituirà:
+- index.html
+- catalogo.html
+- en/index.html
+- en/catalogo.html
+
+E aggiungerà:
+- wedding-experience-whatsapp-v20.jpg
+- en/wedding-experience-whatsapp-en-v20.jpg
+- sitemap.xml
+- robots.txt
+- .nojekyll
+
+LINK DA TESTARE DOPO IL DEPLOY
+Italiano:
+https://magopaolo-blip.github.io/wedding-experience-collection/?v=20
+
+English:
+https://magopaolo-blip.github.io/wedding-experience-collection/en/?v=20
+
+Sitemap:
+https://magopaolo-blip.github.io/wedding-experience-collection/sitemap.xml
