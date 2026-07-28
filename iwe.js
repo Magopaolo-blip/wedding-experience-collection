@@ -30,58 +30,85 @@
   }
 
   document.querySelectorAll('[data-gallery]').forEach(gallery => {
-    const track = gallery.querySelector('[data-gallery-track]');
-    const slides = [...gallery.querySelectorAll('[data-gallery-slide]')];
+    const mainButton = gallery.querySelector('[data-gallery-main-open]');
+    const mainImage = gallery.querySelector('[data-gallery-main]');
+    const thumbs = [...gallery.querySelectorAll('[data-gallery-thumb]')];
     const current = gallery.querySelector('[data-gallery-current]');
     const prev = gallery.querySelector('[data-gallery-prev]');
     const next = gallery.querySelector('[data-gallery-next]');
-    if (!track || !slides.length) return;
+    if (!mainButton || !mainImage || !thumbs.length) return;
 
     let activeIndex = 0;
-    const setActive = index => {
-      activeIndex = Math.max(0, Math.min(slides.length - 1, index));
-      if (current) current.textContent = String(activeIndex + 1).padStart(2, '0');
-    };
-    const goTo = index => {
-      const target = (index + slides.length) % slides.length;
-      slides[target].scrollIntoView({behavior: reduce ? 'auto' : 'smooth', block: 'nearest', inline: 'start'});
-      setActive(target);
+    let changeTimer;
+
+    const update = (index, immediate = false) => {
+      const target = (index + thumbs.length) % thumbs.length;
+      const thumb = thumbs[target];
+      const apply = () => {
+        activeIndex = target;
+        mainImage.src = thumb.dataset.src || '';
+        mainImage.alt = thumb.dataset.alt || '';
+        mainButton.dataset.src = thumb.dataset.src || '';
+        mainButton.dataset.alt = thumb.dataset.alt || '';
+        if (current) current.textContent = String(target + 1).padStart(2, '0');
+        thumbs.forEach((item, i) => {
+          const selected = i === target;
+          item.classList.toggle('is-active', selected);
+          if (selected) item.setAttribute('aria-current', 'true');
+          else item.removeAttribute('aria-current');
+        });
+        thumb.scrollIntoView({behavior: reduce || immediate ? 'auto' : 'smooth', block: 'nearest', inline: 'nearest'});
+        requestAnimationFrame(() => mainButton.classList.remove('is-changing'));
+      };
+      clearTimeout(changeTimer);
+      if (immediate || reduce) apply();
+      else {
+        mainButton.classList.add('is-changing');
+        changeTimer = setTimeout(apply, 150);
+      }
     };
 
-    prev?.addEventListener('click', () => goTo(activeIndex - 1));
-    next?.addEventListener('click', () => goTo(activeIndex + 1));
-    track.addEventListener('keydown', event => {
-      if (event.key === 'ArrowLeft') { event.preventDefault(); goTo(activeIndex - 1); }
-      if (event.key === 'ArrowRight') { event.preventDefault(); goTo(activeIndex + 1); }
+    thumbs.forEach((thumb, index) => thumb.addEventListener('click', () => update(index)));
+    prev?.addEventListener('click', () => update(activeIndex - 1));
+    next?.addEventListener('click', () => update(activeIndex + 1));
+    gallery.addEventListener('keydown', event => {
+      if (event.key === 'ArrowLeft') { event.preventDefault(); update(activeIndex - 1); }
+      if (event.key === 'ArrowRight') { event.preventDefault(); update(activeIndex + 1); }
     });
 
-    let ticking = false;
-    track.addEventListener('scroll', () => {
-      if (ticking) return;
-      ticking = true;
-      requestAnimationFrame(() => {
-        const left = track.scrollLeft;
-        let nearest = 0;
-        let distance = Infinity;
-        slides.forEach((slide, index) => {
-          const d = Math.abs(slide.offsetLeft - left);
-          if (d < distance) { distance = d; nearest = index; }
-        });
-        setActive(nearest);
-        ticking = false;
-      });
+    let touchStartX = null;
+    mainButton.addEventListener('touchstart', event => {
+      touchStartX = event.changedTouches[0]?.clientX ?? null;
     }, {passive: true});
+    mainButton.addEventListener('touchend', event => {
+      if (touchStartX === null) return;
+      const endX = event.changedTouches[0]?.clientX ?? touchStartX;
+      const delta = endX - touchStartX;
+      touchStartX = null;
+      if (Math.abs(delta) < 45) return;
+      mainButton.dataset.ignoreClick = 'true';
+      window.setTimeout(() => delete mainButton.dataset.ignoreClick, 450);
+      update(activeIndex + (delta < 0 ? 1 : -1));
+    }, {passive: true});
+
+    thumbs.slice(1, 3).forEach(thumb => {
+      const image = new Image();
+      image.src = thumb.dataset.src || '';
+    });
+    update(0, true);
   });
 
   const dialog = document.querySelector('[data-gallery-dialog]');
   const dialogImage = dialog?.querySelector('[data-gallery-dialog-image]');
-  const dialogCaption = dialog?.querySelector('[data-gallery-dialog-caption]');
-  document.querySelectorAll('[data-gallery-open]').forEach(button => {
+  document.querySelectorAll('[data-gallery-main-open]').forEach(button => {
     button.addEventListener('click', () => {
+      if (button.dataset.ignoreClick === 'true') {
+        delete button.dataset.ignoreClick;
+        return;
+      }
       if (!dialog || !dialogImage) return;
-      dialogImage.src = button.dataset.src || '';
-      dialogImage.alt = button.dataset.alt || '';
-      if (dialogCaption) dialogCaption.textContent = button.dataset.caption || '';
+      dialogImage.src = button.dataset.src || button.querySelector('img')?.src || '';
+      dialogImage.alt = button.dataset.alt || button.querySelector('img')?.alt || '';
       if (typeof dialog.showModal === 'function') dialog.showModal();
     });
   });
@@ -89,5 +116,6 @@
   dialog?.addEventListener('click', event => {
     if (event.target === dialog) dialog.close();
   });
+
 
 })();
