@@ -1,0 +1,7 @@
+ITALIAN WEDDING ENTERTAINMENT — V23
+
+Modifica principale:
+- eliminata la grande sezione ridondante “Un linguaggio per ogni momento” / “A language for every moment”
+- sostituita con un’intestazione compatta sopra le quattro Experience Card
+- aggiornate entrambe le versioni, italiana e inglese
+- ottimizzato il comportamento responsive su tablet e mobile
