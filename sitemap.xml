@@ -2,31 +2,29 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://magopaolo-blip.github.io/wedding-experience-collection/</loc>
-    <lastmod>2026-07-27</lastmod>
-    <xhtml:link rel="alternate" hreflang="it" href="https://magopaolo-blip.github.io/wedding-experience-collection/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://magopaolo-blip.github.io/wedding-experience-collection/en/" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://magopaolo-blip.github.io/wedding-experience-collection/" />
+    <loc>https://www.italianweddingentertainment.com/</loc>
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.italianweddingentertainment.com/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.italianweddingentertainment.com/en/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.italianweddingentertainment.com/en/"/>
+    <changefreq>monthly</changefreq><priority>1.0</priority>
   </url>
   <url>
-    <loc>https://magopaolo-blip.github.io/wedding-experience-collection/en/</loc>
-    <lastmod>2026-07-27</lastmod>
-    <xhtml:link rel="alternate" hreflang="it" href="https://magopaolo-blip.github.io/wedding-experience-collection/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://magopaolo-blip.github.io/wedding-experience-collection/en/" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://magopaolo-blip.github.io/wedding-experience-collection/" />
+    <loc>https://www.italianweddingentertainment.com/en/</loc>
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.italianweddingentertainment.com/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.italianweddingentertainment.com/en/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.italianweddingentertainment.com/en/"/>
+    <changefreq>monthly</changefreq><priority>0.95</priority>
   </url>
   <url>
-    <loc>https://magopaolo-blip.github.io/wedding-experience-collection/catalogo.html</loc>
-    <lastmod>2026-07-27</lastmod>
-    <xhtml:link rel="alternate" hreflang="it" href="https://magopaolo-blip.github.io/wedding-experience-collection/catalogo.html" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://magopaolo-blip.github.io/wedding-experience-collection/en/catalogo.html" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://magopaolo-blip.github.io/wedding-experience-collection/catalogo.html" />
+    <loc>https://www.italianweddingentertainment.com/catalogo.html</loc>
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.italianweddingentertainment.com/catalogo.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.italianweddingentertainment.com/en/catalogo.html"/>
+    <changefreq>monthly</changefreq><priority>0.8</priority>
   </url>
   <url>
-    <loc>https://magopaolo-blip.github.io/wedding-experience-collection/en/catalogo.html</loc>
-    <lastmod>2026-07-27</lastmod>
-    <xhtml:link rel="alternate" hreflang="it" href="https://magopaolo-blip.github.io/wedding-experience-collection/catalogo.html" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://magopaolo-blip.github.io/wedding-experience-collection/en/catalogo.html" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://magopaolo-blip.github.io/wedding-experience-collection/catalogo.html" />
+    <loc>https://www.italianweddingentertainment.com/en/catalogo.html</loc>
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.italianweddingentertainment.com/catalogo.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.italianweddingentertainment.com/en/catalogo.html"/>
+    <changefreq>monthly</changefreq><priority>0.8</priority>
   </url>
 </urlset>

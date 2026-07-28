@@ -1,0 +1,36 @@
+REVISIONE STRATEGICA V22
+
+IDENTITÀ
+Italian Wedding Entertainment diventa il marchio principale.
+Wedding Experience Collection resta come logica di portfolio, senza competere con il brand.
+
+POSIZIONAMENTO
+Non solo bolle: il sito presenta Bubble Experience, Bubble Bar, Mentalismo Elegante,
+Welcome & Roaming Entertainment e combinazioni su misura.
+
+COPY
+Promessa centrale: "Il momento che tutti ricorderanno."
+Tono: elegante, concreto, orientato a sposi, planner, location e destination wedding.
+
+STRUTTURA
+Hero -> credibilità -> promessa -> panoramica esperienze -> approfondimenti ->
+altre performance -> metodo per planner -> catalogo -> Paolo Musetti -> FAQ -> WhatsApp.
+
+SEO
+Canonical sul nuovo dominio, hreflang IT/EN, Open Graph, Twitter Card,
+dati strutturati, robots, sitemap, titoli e descrizioni aggiornati.
+
+UX
+Menu desktop e mobile, CTA coerenti, WhatsApp fisso su mobile,
+navigazione accessibile, animazioni leggere, video con poster,
+catalogo scorrevole su smartphone.
+
+IMMAGINI
+Hero dedicata agli sposi nella bolla.
+Bubble Bar valorizzato con due immagini di interazione.
+Ritratto artista separato dalle sezioni commerciali.
+Nuova anteprima social 1200x630.
+
+CTA
+Azione principale: verifica data e location su WhatsApp.
+Messaggio precompilato con i cinque dati utili per rispondere rapidamente.

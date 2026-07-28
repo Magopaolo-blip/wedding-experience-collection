@@ -1,0 +1,42 @@
+ITALIAN WEDDING ENTERTAINMENT — REVISIONE COMPLETA V22
+
+QUESTO PACCHETTO AGGIORNA:
+- identità visiva e nuovo brand
+- copy italiano e inglese
+- struttura e menu
+- SEO tecnico e multilingua
+- UX desktop e mobile
+- uso e gerarchia delle immagini
+- call to action WhatsApp
+- catalogo IT/EN
+- favicon, icone e immagine anteprima social
+- sitemap.xml, robots.txt, CNAME e pagina 404
+
+CARICAMENTO SU GITHUB
+1. Estrai lo ZIP sul computer.
+2. Apri il repository wedding-experience-collection.
+3. Carica tutti i file e la cartella "en".
+4. Quando GitHub chiede di sostituire i file esistenti, conferma.
+5. Mantieni nel repository i file video, il PDF e le 13 immagini del catalogo già presenti.
+6. Attendi il pallino verde in Actions / Pages.
+7. Controlla:
+   https://www.italianweddingentertainment.com/
+   https://www.italianweddingentertainment.com/en/
+   https://www.italianweddingentertainment.com/catalogo.html
+
+DOPO LA PUBBLICAZIONE
+- Attiva Enforce HTTPS in Settings > Pages, appena disponibile.
+- In Search Console invia:
+  https://www.italianweddingentertainment.com/sitemap.xml
+
+FILE ESISTENTI DA LASCIARE NEL REPOSITORY
+- wedding-showreel.mp4
+- bubble-bar.mp4
+- catalogo-musetti.pdf
+- catalogo-01.jpg ... catalogo-13.jpg
+
+DOMINIO PRINCIPALE
+www.italianweddingentertainment.com
+
+REDIRECT
+italianweddingentertainment.it -> https://www.italianweddingentertainment.com/
