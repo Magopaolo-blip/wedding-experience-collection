@@ -1,0 +1,10 @@
+ITALIAN WEDDING ENTERTAINMENT — V26 BUBBLES ONLY
+
+Modifiche:
+- eliminata la sezione Beyond Bubbles / Più linguaggi
+- rimosse dalla landing le proposte Mentalismo e Welcome & Roaming
+- mantenute solo The Bubble Experience e The Bubble Bar
+- aggiornati testi, SEO e dati strutturati IT/EN
+- catalogo presentato nella landing esclusivamente come collezione Bubble
+
+PATCH: caricare index.html, en/index.html e iwe.css nelle stesse posizioni, sostituendo i file esistenti.
