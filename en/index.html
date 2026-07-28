@@ -49,6 +49,7 @@
     </a>
     <nav class="desktop-nav" aria-label="Main navigation">
       <a href="#experiences">Experiences</a>
+      <a href="#gallery">Gallery</a>
       <a href="#planners">For planners</a>
       <a href="#paolo">Paolo Musetti</a>
       <a href="catalogo.html">Portfolio</a>
@@ -62,6 +63,7 @@
 <div class="mobile-menu" aria-label="Mobile menu">
   <nav>
     <a href="#experiences">Experiences</a>
+    <a href="#gallery">Gallery</a>
     <a href="#planners">For planners</a>
     <a href="#paolo">Paolo Musetti</a>
     <a href="catalogo.html">Portfolio</a>
@@ -144,6 +146,65 @@
     </div>
   </div>
 </section>
+
+<section class="gallery-section" id="gallery" aria-labelledby="gallery-title">
+  <div class="wrap">
+    <header class="gallery-heading reveal">
+      <div>
+        <p class="eyebrow">Paolo Musetti · Live archive</p>
+        <h2 id="gallery-title">A career built in front of an audience.</h2>
+      </div>
+      <p>Weddings, television, cinema and major events: nine authentic images from more than forty years of live performance.</p>
+    </header>
+
+    <div class="gallery-carousel reveal" data-gallery tabindex="0" role="region" aria-label="Paolo Musetti photo gallery">
+      <div class="gallery-stage">
+        <button class="gallery-nav gallery-nav-prev" type="button" data-gallery-prev aria-label="Previous photo"><span aria-hidden="true">←</span></button>
+        <button class="gallery-main" type="button" data-gallery-main-open aria-label="Enlarge selected photograph">
+          <img src="../assets/gallery/gallery-01-wedding-bubble.webp" alt="Paolo Musetti with a bride during a bubble art performance" data-gallery-main loading="lazy" decoding="async">
+        </button>
+        <button class="gallery-nav gallery-nav-next" type="button" data-gallery-next aria-label="Next photo"><span aria-hidden="true">→</span></button>
+      </div>
+      <div class="gallery-filmstrip" data-gallery-filmstrip role="list" aria-label="Photo selection">
+        <button class="gallery-thumb is-active" type="button" data-gallery-thumb data-src="../assets/gallery/gallery-01-wedding-bubble.webp" data-alt="Paolo Musetti with a bride during a bubble art performance" aria-label="Show photo 01" aria-current="true">
+          <img src="../assets/gallery/gallery-01-wedding-bubble.webp" alt="" loading="lazy" decoding="async">
+        </button>
+        <button class="gallery-thumb" type="button" data-gallery-thumb data-src="../assets/gallery/gallery-06-bubble-art.webp" data-alt="Paolo Musetti in a tuxedo with a large transparent bubble" aria-label="Show photo 02">
+          <img src="../assets/gallery/gallery-06-bubble-art.webp" alt="" loading="lazy" decoding="async">
+        </button>
+        <button class="gallery-thumb" type="button" data-gallery-thumb data-src="../assets/gallery/gallery-05-live-bubble.webp" data-alt="Paolo Musetti during an elegant live performance with a large bubble" aria-label="Show photo 03">
+          <img src="../assets/gallery/gallery-05-live-bubble.webp" alt="" loading="lazy" decoding="async">
+        </button>
+        <button class="gallery-thumb" type="button" data-gallery-thumb data-src="../assets/gallery/gallery-03-rai-tv.webp" data-alt="Paolo Musetti performing on television with a luminous bubble" aria-label="Show photo 04">
+          <img src="../assets/gallery/gallery-03-rai-tv.webp" alt="" loading="lazy" decoding="async">
+        </button>
+        <button class="gallery-thumb" type="button" data-gallery-thumb data-src="../assets/gallery/gallery-04-tuxedo-portrait.webp" data-alt="Paolo Musetti in a close-up performance with a large bubble" aria-label="Show photo 05">
+          <img src="../assets/gallery/gallery-04-tuxedo-portrait.webp" alt="" loading="lazy" decoding="async">
+        </button>
+        <button class="gallery-thumb" type="button" data-gallery-thumb data-src="../assets/gallery/gallery-07-event-performance.webp" data-alt="Paolo Musetti performing at a major event" aria-label="Show photo 06">
+          <img src="../assets/gallery/gallery-07-event-performance.webp" alt="" loading="lazy" decoding="async">
+        </button>
+        <button class="gallery-thumb" type="button" data-gallery-thumb data-src="../assets/gallery/gallery-09-early-portrait.webp" data-alt="Archive portrait of Paolo Musetti with a transparent bubble" aria-label="Show photo 07">
+          <img src="../assets/gallery/gallery-09-early-portrait.webp" alt="" loading="lazy" decoding="async">
+        </button>
+        <button class="gallery-thumb" type="button" data-gallery-thumb data-src="../assets/gallery/gallery-02-signature-stage.webp" data-alt="Paolo Musetti on stage during a performance with a large bubble" aria-label="Show photo 08">
+          <img src="../assets/gallery/gallery-02-signature-stage.webp" alt="" loading="lazy" decoding="async">
+        </button>
+        <button class="gallery-thumb" type="button" data-gallery-thumb data-src="../assets/gallery/gallery-08-cinema-set.webp" data-alt="Paolo Musetti with Ettore Scola on a cinema set" aria-label="Show photo 09">
+          <img src="../assets/gallery/gallery-08-cinema-set.webp" alt="" loading="lazy" decoding="async">
+        </button>
+      </div>
+      <div class="gallery-controls">
+        <span class="gallery-count"><span data-gallery-current>01</span> / 09</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<dialog class="gallery-lightbox" data-gallery-dialog aria-label="Enlarged photograph">
+  <button class="gallery-lightbox-close" type="button" data-gallery-close aria-label="Close photograph">×</button>
+  <figure><img src="" alt="" data-gallery-dialog-image></figure>
+</dialog>
 
 <section class="feature-section" id="bubble">
   <div class="wrap">
