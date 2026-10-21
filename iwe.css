@@ -89,7 +89,7 @@ button,input,textarea{font:inherit}
 .experiences-heading .eyebrow{margin-bottom:8px}
 .experiences-heading h2{font-family:"Cormorant Garamond",Georgia,serif;font-size:clamp(34px,3.6vw,50px);font-weight:500;line-height:1;letter-spacing:-.015em;margin:0}
 .experiences-heading>p{color:var(--muted);max-width:560px;margin:0 0 3px;font-size:14px}
-.experience-cards{display:grid;grid-template-columns:repeat(2,1fr);border-top:1px solid var(--line);border-left:1px solid var(--line)}
+.experience-cards{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--line);border-left:1px solid var(--line)}
 .experience-card{min-height:285px;padding:25px 22px;display:flex;flex-direction:column;border-right:1px solid var(--line);border-bottom:1px solid var(--line);text-decoration:none;background:var(--paper);transition:.25s}
 .experience-card:hover{background:var(--paper-2);transform:translateY(-4px);box-shadow:0 18px 45px rgba(42,31,22,.08)}
 .experience-card .num{color:var(--gold);font-size:9px;letter-spacing:.15em;text-transform:uppercase}
@@ -305,3 +305,16 @@ footer{background:#0e0c0b;color:#a99f94;padding:22px 0;font-size:8px;letter-spac
   .reveal{opacity:1;transform:none;transition:none}
   .button,.button-ghost,.experience-card,.catalog-cover img{transition:none}
 }
+
+/* Close-Up Magic experience */
+.closeup-section{background:var(--paper-2)}
+.closeup-gallery{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;align-items:stretch;margin:0 0 34px}
+.closeup-gallery-item{min-width:0;margin:0;background:var(--dark);box-shadow:var(--shadow);overflow:hidden}
+.closeup-gallery-item img{width:100%;aspect-ratio:3/2;object-fit:contain;background:#171310}
+.closeup-gallery-item figcaption{padding:12px 15px 14px;color:#fff;font-size:9px;letter-spacing:.12em;text-transform:uppercase}
+.closeup-gallery-featured{transform:translateY(-8px)}
+.closeup-details{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(340px,.9fr);gap:42px;align-items:start}
+.closeup-details .feature-copy .lead{max-width:600px}
+.closeup-details-aside .fact-list{margin-top:0}
+@media(max-width:820px){.closeup-gallery{gap:12px}.closeup-gallery-featured{transform:translateY(-5px)}.closeup-details{grid-template-columns:1fr;gap:18px}}
+@media(max-width:560px){.closeup-gallery{grid-template-columns:1fr;gap:16px}.closeup-gallery-featured{transform:none}.closeup-gallery-item img{aspect-ratio:3/2}.closeup-gallery-item figcaption{padding:10px 12px 12px}}

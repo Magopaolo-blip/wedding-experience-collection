@@ -1,0 +1,6 @@
+ITALIAN WEDDING ENTERTAINMENT — GALLERIA MICROMAGIA CLOSE UP
+
+La sezione Micromagia Close Up ora presenta tre immagini: effetto con carta, ritratto di Paolo Musetti con palline rosse al centro, e reazione degli ospiti al tavolo. La galleria e le didascalie sono disponibili in italiano e in inglese e si adattano a desktop e mobile.
+
+File aggiornati: index.html, en/index.html, iwe.css.
+Nuove immagini: assets/gallery/closeup-card-effect.jpeg, closeup-magician-red-balls.png, closeup-wedding-applause.png.
