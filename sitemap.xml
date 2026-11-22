@@ -27,4 +27,46 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://www.italianweddingentertainment.com/en/catalogo.html"/>
     <changefreq>monthly</changefreq><priority>0.8</priority>
   </url>
+  <url>
+    <loc>https://www.italianweddingentertainment.com/bubble-experience-matrimonio.html</loc>
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.italianweddingentertainment.com/bubble-experience-matrimonio.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.italianweddingentertainment.com/en/bubble-experience-weddings.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.italianweddingentertainment.com/en/bubble-experience-weddings.html"/>
+    <changefreq>monthly</changefreq><priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://www.italianweddingentertainment.com/en/bubble-experience-weddings.html</loc>
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.italianweddingentertainment.com/bubble-experience-matrimonio.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.italianweddingentertainment.com/en/bubble-experience-weddings.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.italianweddingentertainment.com/en/bubble-experience-weddings.html"/>
+    <changefreq>monthly</changefreq><priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://www.italianweddingentertainment.com/bubble-bar-matrimonio.html</loc>
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.italianweddingentertainment.com/bubble-bar-matrimonio.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.italianweddingentertainment.com/en/bubble-bar-weddings.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.italianweddingentertainment.com/en/bubble-bar-weddings.html"/>
+    <changefreq>monthly</changefreq><priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://www.italianweddingentertainment.com/en/bubble-bar-weddings.html</loc>
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.italianweddingentertainment.com/bubble-bar-matrimonio.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.italianweddingentertainment.com/en/bubble-bar-weddings.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.italianweddingentertainment.com/en/bubble-bar-weddings.html"/>
+    <changefreq>monthly</changefreq><priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://www.italianweddingentertainment.com/micromagia-close-up-matrimonio.html</loc>
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.italianweddingentertainment.com/micromagia-close-up-matrimonio.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.italianweddingentertainment.com/en/close-up-magic-weddings.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.italianweddingentertainment.com/en/close-up-magic-weddings.html"/>
+    <changefreq>monthly</changefreq><priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://www.italianweddingentertainment.com/en/close-up-magic-weddings.html</loc>
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.italianweddingentertainment.com/micromagia-close-up-matrimonio.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.italianweddingentertainment.com/en/close-up-magic-weddings.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.italianweddingentertainment.com/en/close-up-magic-weddings.html"/>
+    <changefreq>monthly</changefreq><priority>0.75</priority>
+  </url>
 </urlset>
