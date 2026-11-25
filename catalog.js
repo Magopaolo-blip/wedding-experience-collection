@@ -73,3 +73,15 @@
   }
   render();
 })();
+
+// Keep the desktop image and its link overlay inside the space left by the page controls.
+if ('ResizeObserver' in window) {
+  const catalogChrome = [...document.querySelectorAll('.topbar, .catalog-guide, .bottom')];
+  const updateCatalogSpace = () => {
+    const height = catalogChrome.reduce((sum, section) => sum + section.offsetHeight, 0);
+    document.body.style.setProperty('--catalog-chrome', height + 'px');
+  };
+  const catalogResize = new ResizeObserver(updateCatalogSpace);
+  catalogChrome.forEach(section => catalogResize.observe(section));
+  updateCatalogSpace();
+}
