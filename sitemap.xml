@@ -69,4 +69,28 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.italianweddingentertainment.com/en/close-up-magic-weddings.html"/>
     <changefreq>monthly</changefreq><priority>0.75</priority>
   </url>
+  <url>
+    <loc>https://www.italianweddingentertainment.com/idee-intrattenimento-matrimonio.html</loc>
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.italianweddingentertainment.com/idee-intrattenimento-matrimonio.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.italianweddingentertainment.com/en/wedding-reception-entertainment-ideas.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.italianweddingentertainment.com/en/wedding-reception-entertainment-ideas.html"/>
+  </url>
+  <url>
+    <loc>https://www.italianweddingentertainment.com/en/wedding-reception-entertainment-ideas.html</loc>
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.italianweddingentertainment.com/idee-intrattenimento-matrimonio.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.italianweddingentertainment.com/en/wedding-reception-entertainment-ideas.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.italianweddingentertainment.com/en/wedding-reception-entertainment-ideas.html"/>
+  </url>
+  <url>
+    <loc>https://www.italianweddingentertainment.com/intrattenimento-wedding-planner.html</loc>
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.italianweddingentertainment.com/intrattenimento-wedding-planner.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.italianweddingentertainment.com/en/wedding-entertainment-for-planners.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.italianweddingentertainment.com/en/wedding-entertainment-for-planners.html"/>
+  </url>
+  <url>
+    <loc>https://www.italianweddingentertainment.com/en/wedding-entertainment-for-planners.html</loc>
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.italianweddingentertainment.com/intrattenimento-wedding-planner.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.italianweddingentertainment.com/en/wedding-entertainment-for-planners.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.italianweddingentertainment.com/en/wedding-entertainment-for-planners.html"/>
+  </url>
 </urlset>
