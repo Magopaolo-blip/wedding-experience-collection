@@ -1,5 +1,23 @@
 
 (() => {
+  const paidSearch = new URLSearchParams(window.location.search);
+  const campaignReferences = new Map([
+    ['iwe_search_it', 'IWE-ADS-IT'],
+    ['iwe_search_en_uk', 'IWE-ADS-UK'],
+  ]);
+  const campaignReference = campaignReferences.get(paidSearch.get('utm_campaign'));
+  if (paidSearch.get('utm_source') === 'google' && paidSearch.get('utm_medium') === 'cpc' && campaignReference) {
+    const referenceLabel = document.documentElement.lang === 'en' ? 'Reference' : 'Riferimento';
+    document.querySelectorAll('a[href^="https://wa.me/"]').forEach(link => {
+      const destination = new URL(link.href);
+      const message = destination.searchParams.get('text');
+      if (message) {
+        destination.searchParams.set('text', message + '\n\n' + referenceLabel + ': ' + campaignReference);
+        link.href = destination.href;
+      }
+    });
+  }
+
   const toggle = document.querySelector('.mobile-toggle');
   const menu = document.querySelector('.mobile-menu');
   if (toggle && menu) {
